@@ -26,7 +26,7 @@ namespace Infraestructure.Data
                                   bwData = new BinaryWriter(context.DataStream))                 
             {
                 int n,k;
-                using (BinaryReader brHeader = new BinaryReader(context.HeaderStream))
+                using (BinaryReader brHeader = new BinaryReader(bwHeader.BaseStream))
                 {
                     if(brHeader.BaseStream.Length == 0)
                     {
@@ -38,27 +38,27 @@ namespace Infraestructure.Data
                         brHeader.BaseStream.Seek(0, SeekOrigin.Begin);
                         n = brHeader.ReadInt32();
                         k = brHeader.ReadInt32();
-                    }                    
-                }
+                    }
 
-                long pos = k * SIZE;
-                bwData.BaseStream.Seek(pos,SeekOrigin.Begin);
-                bwData.Write(++k);
-                bwData.Write(t.Name);
-                bwData.Write(t.Brand);
-                bwData.Write(t.Model);
-                bwData.Write(t.Description);
-                bwData.Write(t.Price);
-                bwData.Write(t.Stock);
-                bwData.Write(t.ImageURL);
+                    long pos = k * SIZE;
+                    bwData.BaseStream.Seek(pos,SeekOrigin.Begin);
+                    bwData.Write(++k);
+                    bwData.Write(t.Name);
+                    bwData.Write(t.Brand);
+                    bwData.Write(t.Model);
+                    bwData.Write(t.Description);
+                    bwData.Write(t.Price);
+                    bwData.Write(t.Stock);
+                    bwData.Write(t.ImageURL);
                                
-                long posh = 8 + n * 4;
-                bwHeader.BaseStream.Seek(posh,SeekOrigin.Begin);
-                bwHeader.Write(k);
+                    long posh = 8 + n * 4;
+                    bwHeader.BaseStream.Seek(posh,SeekOrigin.Begin);
+                    bwHeader.Write(k);
 
-                bwHeader.BaseStream.Seek(0, SeekOrigin.Begin);
-                bwHeader.Write(++n);
-                bwHeader.Write(k);
+                    bwHeader.BaseStream.Seek(0, SeekOrigin.Begin);
+                    bwHeader.Write(++n);
+                    bwHeader.Write(k);
+                }
             }
         }
 

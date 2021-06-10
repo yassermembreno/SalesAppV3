@@ -1,0 +1,6 @@
+C:\Users\Sistemas-13\source\repos\SalesApp\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\Sistemas-13\source\repos\SalesApp\Core\bin\Debug\Core.exe.config
+C:\Users\Sistemas-13\source\repos\SalesApp\Core\bin\Debug\Core.exe
+C:\Users\Sistemas-13\source\repos\SalesApp\Core\bin\Debug\Core.pdb
+C:\Users\Sistemas-13\source\repos\SalesApp\Core\obj\Debug\Core.exe
+C:\Users\Sistemas-13\source\repos\SalesApp\Core\obj\Debug\Core.pdb

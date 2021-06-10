@@ -1,0 +1,11 @@
+C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.csprojAssemblyReference.cache
+C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\bin\Debug\Infraestructure.exe.config
+C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\bin\Debug\Infraestructure.exe
+C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\bin\Debug\Infraestructure.pdb
+C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\bin\Debug\Core.exe
+C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\bin\Debug\Core.pdb
+C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\bin\Debug\Core.exe.config
+C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.csproj.CopyComplete
+C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.exe
+C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.pdb
