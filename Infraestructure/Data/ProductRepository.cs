@@ -69,7 +69,45 @@ namespace Infraestructure.Data
 
         public IEnumerable<Product> Find(Expression<Func<Product, bool>> where)
         {
-            throw new NotImplementedException();
+            int n;
+            List<Product> products = new List<Product>();
+            Func<Product, bool> func = where.Compile();
+            using (BinaryReader brHeader = new BinaryReader(context.HeaderStream),
+                                  brData = new BinaryReader(context.DataStream))
+            {
+                brHeader.BaseStream.Seek(0, SeekOrigin.Begin);
+                n = brHeader.ReadInt32();
+
+                for (int i = 0; i < n; i++)
+                {
+                    long posh = 8 + i * 4;
+                    brHeader.BaseStream.Seek(posh, SeekOrigin.Begin);
+                    int index = brHeader.ReadInt32();
+
+                    long posd = (index - 1) * SIZE;
+                    brData.BaseStream.Seek(posd, SeekOrigin.Begin);
+
+                    Product p = new Product()
+                    {
+                        Id = brData.ReadInt32(),
+                        Name = brData.ReadString(),
+                        Brand = brData.ReadString(),
+                        Model = brData.ReadString(),
+                        Description = brData.ReadString(),
+                        Price = brData.ReadDecimal(),
+                        Stock = brData.ReadInt32(),
+                        ImageURL = brData.ReadString()
+                    };
+
+                    if (func(p))
+                    {
+                        products.Add(p);
+                    }
+                    
+                }
+            }
+
+            return products;
         }
 
         public IEnumerable<Product> GetAll()

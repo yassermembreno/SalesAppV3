@@ -31,7 +31,7 @@ namespace Presentation
             {
                 Name = "Galleta",
                 Brand = "Nabisco",
-                Model = "Oreo",
+                Model = "Chiky",
                 Description = "Galleta de chocolate",
                 Price = 10M,
                 Stock = 10,
@@ -45,7 +45,15 @@ namespace Presentation
         {
             List<Product> products = productRepository.GetAll().ToList();
 
-            products.ForEach(p => Console.WriteLine($"Nombre: {p.Name}"));
+            products.ForEach(p => Console.WriteLine($"Nombre: {p.Model}"));
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            List<Product> products = productRepository.Find(p => p.Model.Equals("Oreo", StringComparison.InvariantCultureIgnoreCase))
+                                                      .ToList();
+
+            products.ForEach(p => Console.WriteLine($"Nombre: {p.Model}"));
+        } 
     }
 }
