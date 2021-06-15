@@ -134,7 +134,7 @@ namespace Infraestructure.Data
                 long posh = 8 + (id - 1) * 4;
                 brHeader.BaseStream.Seek(posh, SeekOrigin.Begin);
                 int index = brHeader.ReadInt32();
-
+                //TO-DO VALIDATE INDEX
                 long posd = (index - 1) * size;
                 brData.BaseStream.Seek(posd, SeekOrigin.Begin);
                 foreach (PropertyInfo pinfo in properties)

@@ -49,6 +49,7 @@
     <Compile Include="Data\BinaryReaderExtension.cs" />
     <Compile Include="Data\ClientRepository.cs" />
     <Compile Include="Data\ProductRepository.cs" />
+    <Compile Include="Data\ProveedorRepository.cs" />
     <Compile Include="Data\RAFContext.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>

@@ -45,9 +45,9 @@ namespace Presentation
             //productRepository.Create(p);
             Client client = new Client()
             {
-                Name = "Ana",
-                Lastname = "Conda",
-                Email = "a.conda@gmail.com",
+                Name = "Paul",
+                Lastname = "Vaso",
+                Email = "p.vaso@gmail.com",
                 Phone = "85967414"
             };
             clientRepository.Create(client);
