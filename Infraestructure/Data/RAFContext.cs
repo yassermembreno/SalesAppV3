@@ -49,14 +49,24 @@ namespace Infraestructure.Data
                         n = brHeader.ReadInt32();
                         k = brHeader.ReadInt32();
                     }
+                    //calculamos la posicion en Data
+                    long pos = k * size;
+                    bwData.BaseStream.Seek(pos,SeekOrigin.Begin);
 
                     PropertyInfo[] info = t.GetType().GetProperties();
                     foreach (PropertyInfo pinfo in info)
                     {
                         Type type = pinfo.PropertyType;
                         object obj = pinfo.GetValue(t, null);
+                        
                         if (type.IsGenericType)
                         {
+                            continue;
+                        }
+
+                        if (pinfo.Name.Equals("Id", StringComparison.CurrentCultureIgnoreCase))
+                        {
+                            bwData.Write(++k);
                             continue;
                         }
 
