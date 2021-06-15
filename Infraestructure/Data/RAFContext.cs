@@ -54,6 +54,7 @@ namespace Infraestructure.Data
                     foreach (PropertyInfo pinfo in info)
                     {
                         Type type = pinfo.PropertyType;
+                        object obj = pinfo.GetValue(t, null);
                         if (type.IsGenericType)
                         {
                             continue;
@@ -61,35 +62,35 @@ namespace Infraestructure.Data
 
                         if (type == typeof(int))
                         {
-                            bwData.Write((int)Convert.ChangeType(pinfo.GetValue(pinfo, null), type));
+                            bwData.Write((int)obj);
                         }
                         else if (type == typeof(long))
                         {
-                            bwData.Write((long)Convert.ChangeType(pinfo.GetValue(pinfo, null), type));
+                            bwData.Write((long)obj);
                         }
                         else if (type == typeof(float))
                         {
-                            bwData.Write((float)Convert.ChangeType(pinfo.GetValue(pinfo, null), type));
+                            bwData.Write((float)obj);
                         }
                         else if (type == typeof(double))
                         {
-                            bwData.Write((double)Convert.ChangeType(pinfo.GetValue(pinfo, null), type));
+                            bwData.Write((double)obj);
                         }
                         else if (type == typeof(decimal))
                         {
-                            bwData.Write((decimal)Convert.ChangeType(pinfo.GetValue(pinfo, null), type));
+                            bwData.Write((decimal)obj);
                         }
                         else if (type == typeof(char))
                         {
-                            bwData.Write((char)Convert.ChangeType(pinfo.GetValue(pinfo, null), type));
+                            bwData.Write((char)obj);
                         }
                         else if (type == typeof(bool))
                         {
-                            bwData.Write((bool)Convert.ChangeType(pinfo.GetValue(pinfo, null), type));
+                            bwData.Write((bool)obj);
                         }
                         else if (type == typeof(string))
                         {
-                            bwData.Write((string)Convert.ChangeType(pinfo.GetValue(pinfo, null), type));
+                            bwData.Write((string)obj);
                         }
                     }
 

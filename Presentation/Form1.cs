@@ -31,8 +31,8 @@ namespace Presentation
             {
                 Name = "Galleta",
                 Brand = "Nabisco",
-                Model = "Chiky",
-                Description = "Galleta de chocolate",
+                Model = "Sponch",
+                Description = "Galleta de Vainilla",
                 Price = 10M,
                 Stock = 10,
                 ImageURL = ""
