@@ -9,9 +9,9 @@ namespace Infraestructure.Data
 {
     public static class BinaryReaderExtension
     {
-        public static object GetValue<T>(this BinaryReader br, Type type)
+        public static object GetValue<T>(this BinaryReader br, TypeCode typeCode)
         {
-            switch (Type.GetTypeCode(type))
+            switch (typeCode)
             {
                 case TypeCode.Boolean: { return br.ReadBoolean(); }
                 case TypeCode.Byte: { return br.ReadByte(); }
@@ -22,6 +22,7 @@ namespace Infraestructure.Data
                 case TypeCode.Int16: { return br.ReadInt16(); }
                 case TypeCode.Int32: { return br.ReadInt32(); }
                 case TypeCode.Int64: { return br.ReadUInt64(); }
+                case TypeCode.String: { return br.ReadString(); }
                 default: { return br.Read(); }
             }
         }

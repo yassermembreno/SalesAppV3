@@ -44,6 +44,10 @@ namespace Presentation
         private void Button1_Click(object sender, EventArgs e)
         {
             List<Product> products = productRepository.GetAll().ToList();
+            if(products == null || products.Count == 0)
+            {
+                Console.WriteLine("No data");
+            }
 
             products.ForEach(p => Console.WriteLine($"Nombre: {p.Model}"));
         }

@@ -9,3 +9,14 @@ C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\bin\Debug\Core.exe.co
 C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.csproj.CopyComplete
 C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.exe
 C:\Users\Sistemas-13\source\repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.pdb
+C:\Users\Yasser\Source\Repos\SalesApp\Infraestructure\bin\Debug\Infraestructure.exe.config
+C:\Users\Yasser\Source\Repos\SalesApp\Infraestructure\bin\Debug\Infraestructure.exe
+C:\Users\Yasser\Source\Repos\SalesApp\Infraestructure\bin\Debug\Infraestructure.pdb
+C:\Users\Yasser\Source\Repos\SalesApp\Infraestructure\bin\Debug\Core.exe
+C:\Users\Yasser\Source\Repos\SalesApp\Infraestructure\bin\Debug\Core.pdb
+C:\Users\Yasser\Source\Repos\SalesApp\Infraestructure\bin\Debug\Core.exe.config
+C:\Users\Yasser\Source\Repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.csproj.AssemblyReference.cache
+C:\Users\Yasser\Source\Repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\Yasser\Source\Repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.csproj.CopyComplete
+C:\Users\Yasser\Source\Repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.exe
+C:\Users\Yasser\Source\Repos\SalesApp\Infraestructure\obj\Debug\Infraestructure.pdb
