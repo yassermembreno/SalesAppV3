@@ -31,41 +31,41 @@ namespace Presentation
 
         private void BtnOk_Click(object sender, EventArgs e)
         {
-            //Product p = new Product()
-            //{
-            //    Name = "Galleta",
-            //    Brand = "Nabisco",
-            //    Model = "Oreo",
-            //    Description = "Galleta de Vainilla",
-            //    Price = 10M,
-            //    Stock = 10,
-            //    ImageURL = ""
-            //};
-            
-            //productRepository.Create(p);
-            Client client = new Client()
+            Product p = new Product()
             {
-                Name = "Paul",
-                Lastname = "Vaso",
-                Email = "p.vaso@gmail.com",
-                Phone = "85967414"
+                Name = "Galleta",
+                Brand = "Nabisco",
+                Model = "Oreo",
+                Description = "Galleta de Vainilla",
+                Price = 10M,
+                Stock = 10,
+                ImageURL = ""
             };
-            clientRepository.Create(client);
-         }
+
+            productRepository.Create(p);
+            //Client client = new Client()
+            //{
+            //    Name = "Paul",
+            //    Lastname = "Vaso",
+            //    Email = "p.vaso@gmail.com",
+            //    Phone = "85967414"
+            //};
+            //clientRepository.Create(client);
+        }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            //List<Product> products = productRepository.GetAll().ToList();
-            //if(products == null || products.Count == 0)
-            //{
-            //    Console.WriteLine("No data");
-            //}
+            List<Product> products = productRepository.GetAll().ToList();
+            if (products == null || products.Count == 0)
+            {
+                Console.WriteLine("No data");
+            }
 
-            //products.ForEach(p => Console.WriteLine($"Id: {p.Id} Name: {p.Model}"));
+            products.ForEach(p => Console.WriteLine($"Id: {p.Id} Name: {p.Model}"));
 
-            List<Client> clients = clientRepository.GetAll().ToList();
+            //List<Client> clients = clientRepository.GetAll().ToList();
 
-            clients.ForEach(c => Console.WriteLine($"Id: {c.Id} Name: {c.Name}"));
+            //clients.ForEach(c => Console.WriteLine($"Id: {c.Id} Name: {c.Name}"));
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -78,7 +78,11 @@ namespace Presentation
 
         private void Button3_Click(object sender, EventArgs e)
         {
-
+            Product prod = productRepository.Find(p => p.Id == 1).FirstOrDefault();
+            if (productRepository.Delete(prod))
+            {
+                MessageBox.Show($"Product with Id{prod.Id} was deleted.");
+            }
         }
     }
 }

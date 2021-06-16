@@ -133,6 +133,7 @@ namespace Infraestructure.Data
 
                 PropertyInfo[] properties = newValue.GetType().GetProperties();
                 long posh = 8 + (id - 1) * 4;
+                //TODO Add Binary search to find the id
                 brHeader.BaseStream.Seek(posh, SeekOrigin.Begin);
                 int index = brHeader.ReadInt32();
                 //TO-DO VALIDATE INDEX
@@ -255,10 +256,10 @@ namespace Infraestructure.Data
                     brHeader.BaseStream.Seek(0, SeekOrigin.Begin);
                     int n = brHeader.ReadInt32();
                     int k = brHeader.ReadInt32();
-                    using (BinaryWriter bwTemp = new BinaryWriter(DataStream))
+                    using (BinaryWriter bwTemp = new BinaryWriter(temp))
                     {
                         bwTemp.BaseStream.Seek(0, SeekOrigin.Begin);
-                        bwTemp.Write(n);
+                        bwTemp.Write(--n);
                         bwTemp.Write(k);                        
 
                         for (int i = 0, j = 0; i < n; i++)
@@ -277,11 +278,10 @@ namespace Infraestructure.Data
                             j++;
                         }
                     }
-                }
-                File.Delete($"{fileName}.hd");
-                File.Move(temp.Name, $"{fileName}.hd");
-            }            
-            
+                }               
+            }
+            File.Delete($"{fileName}.hd");
+            File.Move("temp.hd", $"{fileName}.hd");
             return true;
         }
     }

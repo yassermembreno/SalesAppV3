@@ -47,7 +47,7 @@ namespace Infraestructure.Data
 
         public IEnumerable<Product> Find(Expression<Func<Product, bool>> where)
         {
-            throw new NotImplementedException();
+            return context.Find(where);
         }
 
 
