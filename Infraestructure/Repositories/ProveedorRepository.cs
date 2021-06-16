@@ -1,4 +1,4 @@
-﻿using Core.Interfaces;
+﻿using Core;
 using Core.Poco;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infraestructure.Data
 {
-    public class ProveedorRepository : IProveedorRepository
+    public class ProveedorRepository : ISupplierRepository
     {
         private RAFContext context;
         private readonly int SIZE = 388;
@@ -19,27 +19,27 @@ namespace Infraestructure.Data
             context = new RAFContext("Proveedor",SIZE);
         }
 
-        public void Create(Proveedor t)
+        public void Create(Supplier t)
         {
-            context.Create<Proveedor>(t);
+            context.Create<Supplier>(t);
         }
 
-        public bool Delete(Proveedor t)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Proveedor> Find(Expression<Func<Proveedor, bool>> where)
+        public bool Delete(Supplier t)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Proveedor> GetAll()
+        public IEnumerable<Supplier> Find(Expression<Func<Supplier, bool>> where)
         {
-            return context.GetAll<Proveedor>();
+            throw new NotImplementedException();
         }
 
-        public int Update(Proveedor t)
+        public IEnumerable<Supplier> GetAll()
+        {
+            return context.GetAll<Supplier>();
+        }
+
+        public int Update(Supplier t)
         {
             throw new NotImplementedException();
         }

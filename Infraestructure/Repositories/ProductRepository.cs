@@ -1,4 +1,4 @@
-﻿using Core.Interfaces;
+﻿using Core;
 using Core.Poco;
 using System;
 using System.Collections.Generic;
@@ -27,12 +27,17 @@ namespace Infraestructure.Data
 
         public int Update(Product t)
         {
-            throw new NotImplementedException();
+
+            return 0;
         }
 
         public bool Delete(Product t)
         {
-            throw new NotImplementedException();
+            if(context.Get<Product>(t.Id) == null)
+            {
+                throw new ArgumentException($"Product with Id {t.Id} does not exists.");
+            } 
+            return context.Delete(t.Id);
         }
 
         public IEnumerable<Product> GetAll()

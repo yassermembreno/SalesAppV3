@@ -1,4 +1,4 @@
-﻿using Core.Interfaces;
+﻿using Core;
 using Core.Poco;
 using System;
 using System.Collections.Generic;

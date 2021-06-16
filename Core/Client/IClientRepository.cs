@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Interfaces
+namespace Core
 {
-    public interface IProductRepository : IRepository<Product>
+    public interface IClientRepository : IRepository<Client>
     {
-        
     }
 }

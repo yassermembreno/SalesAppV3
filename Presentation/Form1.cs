@@ -1,4 +1,4 @@
-﻿using Core.Interfaces;
+﻿using Core;
 using Core.Poco;
 using Infraestructure.Data;
 using System;
@@ -74,6 +74,11 @@ namespace Presentation
                                                       .ToList();
 
             products.ForEach(p => Console.WriteLine($"Nombre: {p.Model}"));
-        } 
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

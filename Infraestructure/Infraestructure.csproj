@@ -46,11 +46,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\BinaryReaderExtension.cs" />
-    <Compile Include="Data\ClientRepository.cs" />
-    <Compile Include="Data\ProductRepository.cs" />
-    <Compile Include="Data\ProveedorRepository.cs" />
-    <Compile Include="Data\RAFContext.cs" />
+    <Compile Include="Repositories\BinaryReaderExtension.cs" />
+    <Compile Include="Repositories\ClientRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\ProveedorRepository.cs" />
+    <Compile Include="Repositories\RAFContext.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>

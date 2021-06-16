@@ -38,13 +38,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\Catalogs.cs" />
-    <Compile Include="Interfaces\IClientRepository.cs" />
-    <Compile Include="Interfaces\IProveedorRepository.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Interfaces\IProductRepository.cs" />
-    <Compile Include="Poco\Client.cs" />
-    <Compile Include="Poco\Product.cs" />
-    <Compile Include="Poco\Proveedor.cs" />
+    <Compile Include="Client\IClientRepository.cs" />
+    <Compile Include="Supplier\ISupplierRepository.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Product\IProductRepository.cs" />
+    <Compile Include="Client\Client.cs" />
+    <Compile Include="Product\Product.cs" />
+    <Compile Include="Supplier\Supplier.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>

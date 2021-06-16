@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Poco
 {
-    public class Proveedor
+    public class Supplier
     {
         public int Id { get; set; }//4
         public string Name { get; set; }//43
