@@ -245,44 +245,6 @@ namespace Infraestructure.Data
                 
             }
             return listT;
-        }
-
-        public bool Delete(int id)
-        {
-            using (FileStream temp = File.Open("temp.hd", FileMode.Create, FileAccess.ReadWrite))
-            {
-                using (BinaryReader brHeader = new BinaryReader(HeaderStream))
-                {
-                    brHeader.BaseStream.Seek(0, SeekOrigin.Begin);
-                    int n = brHeader.ReadInt32();
-                    int k = brHeader.ReadInt32();
-                    using (BinaryWriter bwTemp = new BinaryWriter(temp))
-                    {
-                        bwTemp.BaseStream.Seek(0, SeekOrigin.Begin);
-                        bwTemp.Write(--n);
-                        bwTemp.Write(k);                        
-
-                        for (int i = 0, j = 0; i < n; i++)
-                        {
-                            long posh = 8 + i * 4;
-                            long post = 8 + j * 4;
-                            brHeader.BaseStream.Seek(posh, SeekOrigin.Begin);
-                            int key = brHeader.ReadInt32();
-
-                            if (id == key)
-                            {
-                                continue;
-                            }
-                            bwTemp.BaseStream.Seek(post, SeekOrigin.Begin);
-                            bwTemp.Write(id);
-                            j++;
-                        }
-                    }
-                }               
-            }
-            File.Delete($"{fileName}.hd");
-            File.Move("temp.hd", $"{fileName}.hd");
-            return true;
-        }
+        }        
     }
 }
